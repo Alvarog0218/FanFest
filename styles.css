@@ -1,0 +1,65 @@
+body {
+    background-color: #000000; /* brand-black */
+    color: #FFFDEE; /* brand-cream */
+}
+/* Custom glow effects and micro animations */
+.btn-primary {
+    background: linear-gradient(135deg, #D5FC6B, #B4E622); /* Lime gradient */
+    color: #000000;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(213, 252, 107, 0.6);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #e4fd91, #D5FC6B);
+}
+.glass-panel {
+    background: rgba(29, 29, 27, 0.6); /* brand-dark #1D1D1B */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 253, 238, 0.05); /* brand-cream/5 */
+    transition: all 0.3s ease;
+}
+.glass-panel:hover {
+    border-color: rgba(117, 51, 255, 0.4); /* brand-purple */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5), 0 0 15px rgba(117, 51, 255, 0.2);
+}
+.tab-btn {
+    position: relative;
+}
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #7533FF; /* brand-purple */
+    transition: width 0.3s ease;
+}
+.tab-btn.active {
+    color: #D5FC6B; /* brand-lime */
+    text-shadow: 0 0 10px rgba(213, 252, 107, 0.5);
+}
+.tab-btn.active::after {
+    width: 100%;
+}
+.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.hero-bg {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('./assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.gradient-text {
+    background: linear-gradient(to right, #D5FC6B, #7533FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
